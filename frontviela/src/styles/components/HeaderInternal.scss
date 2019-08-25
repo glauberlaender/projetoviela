@@ -1,3 +1,14 @@
 .#{$namespace}-HeaderInternal {
-  
+  padding: $spacing-stack-xl 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-link {
+    &:hover {
+      color: $color-neutral-darkest;
+    }
+  }
+  &-logo {
+    width: 170px;
+  }
 }

@@ -66,10 +66,12 @@ $font-family-base:  'Encode Sans Expanded';
 @import 'baseComponents/Link/link';
 @import 'baseComponents/Button/button';
 @import 'baseComponents/Grid/grid';
+@import 'baseComponents/Divider';
 
 // Components
 @import 'components/Content';
 @import 'components/Post';
+@import 'components/HeaderInternal';
 
 // Sections
 @import 'section/SectionContent';

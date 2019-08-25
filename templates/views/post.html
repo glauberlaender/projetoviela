@@ -1,10 +1,7 @@
 {% extends "layouts/internal-page.html" %}
 
 {% block content %}
-	<article class="viela-Container viela-Post">
-		<p>
-			<a href="/blog/{{data.post.categories[0].key}}">&larr; {{data.post.categories[0].name}}s</a>
-		</p>
+	<article class="viela-Post">
 		{% if not data.post %}
 			<h2>Post inválido :/</h2>
 		{% else %}
@@ -29,4 +26,5 @@
 			</div>
 		{% endif %}
 	</article>
+	<hr class="viela-Divider">
 {% endblock %}
