@@ -7,8 +7,15 @@
   <title>webpack starterkit</title>
   <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:200,300,400,500,700,800,900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="viela-Container">
   
+    <header class="viela-HeaderInternal viela-row">
+      <a href="/blog/{{data.post.categories[0].key}}" class="viela-Heading viela-Heading--md viela-HeaderInternal-link">
+        &larr; {{data.post.categories[0].name}}s
+      </a>
+      <img class="viela-HeaderInternal-logo" src="/images/projeto-viela-logo.svg" alt="Projeto Viela Logo">
+    </header>
+
   <div class="viela-Donate">
     <h3 class="viela-Heading viela-Heading--md">Novas histórias em breve</h3>
     <p class="viela-Subtitle viela-Subtitle--sm">Ajude a criarmos novos caminhos</p>

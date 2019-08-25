@@ -1,38 +1,35 @@
-{% extends "layouts/default.html" %}
+{% extends "layouts/internal-page.html" %}
 
 {% macro blogPost(post) %}
-<div class="post" data-ks-editable="editable(user, { list: " Post ", id: post.id })">
-	<h2>
-		<a href="/blog/post/{{ post.slug }}">{{ post.title }}</a>
-	</h2>
-	<p class="lead text-muted">Posted
-		{% if post.publishedDate %}
-			<br>on {{ post._.publishedDate.format("MMMM Do, YYYY") }}
-		{% endif %}
-		{% if post.categories and post.categories.length %}
-			<br>in {% for cat in post.categories %}<a href="/blog/{{ cat.key }}">{{ cat.name }}</a>{% if loop.index < post.categories.length %}, {% endif %}{% endfor %}
-		{% endif %}
-		{% if post.author %}
-			<br>by {{ post.author.name.first }}
-		{% endif %}
-	</p>
-	{% if post.image.exists %}
-		<img src="{{ post._.image.fit(160,160) }}" class="img pull-right">
-	{% endif %}
-	<p>{{ post.content.brief|safe }}</p>
-	{% if post.content.extended %}
-		<p class="read-more">
-			<a href="/blog/post/{{ post.slug }}">Read more...</a>
-		</p>
-	{% endif %}
-</div>
+	<article class="viela-Post">
+			{% if not post %}
+				<h2>Post inválido :/</h2>
+			{% else %}
+				<header>
+					{% if post.image.exists %}
+						<div class="viela-Row viela-Post-banner">
+							<img src="{{ post._.image.fit(1230,586) }}" class="viela-Col-sm-12">
+						</div>
+					{% endif %}
+					<div class="viela-Content viela-Row">
+						<p class="viela-Tag viela-Tag--dark viela-Col-md-10 viela-Offset-md-1">{{post.categories[0].name}} - {{ post.hat }}</p>
+						<h2 class="viela-Heading viela-Heading--xl viela-Col-md-6 viela-Offset-md-1">{{ post.title }}</h2>
+					</div>
+				</header>
+				<div class="viela-Row">
+					<div class="viela-Text viela-Text--body viela-Col-md-10 viela-Offset-md-1">
+						{{ post.content.brief|safe }}
+						<div class="viela-Link viela-Link--readMore">
+							<a class="viela-Link--anchor" href="/blog/post/{{ post.slug }}">Ler mais...</a>
+						</div>
+					</div>
+				</div>
+			{% endif %}
+		</article>
 {% endmacro %}
 
 {% block intro %}
-<div class="container">
-	{% set title = ( data.category.name if data.category else "Blog" ) %}
-	<h1>{{ title }}</h1>
-</div>
+{# empty #}
 {% endblock %}
 
 {% block content %}
@@ -43,19 +40,6 @@
 				<h3 class="text-muted">Invalid Category.</h3>
 			{% else %}
 				{% if data.posts.results.length %}
-					{% if data.posts.totalPages > 1 %}
-						<h4 class="text-weight-normal">
-							Showing
-							<strong>{{ data.posts.first }}</strong>
-							to
-							<strong>{{ data.posts.last }}</strong>
-							of
-							<strong>{{ data.posts.total }}</strong>
-							posts.
-						</h4>
-					{% else %}
-						<h4 class="text-weight-normal">Showing {{ utils.plural(data.posts.results.length, "* post") }}.</h4>
-					{% endif %}
 					<div class="blog">
 						{% for post in data.posts.results %} {{ blogPost(post) }} {% endfor %}
 					</div>
@@ -96,7 +80,6 @@
 									</a>
 								</li>
 							{% endif %}
-
 						</ul>
 					{% endif %}
 				{% else %}
@@ -108,8 +91,9 @@
 				{% endif %}
 			{% endif %}
 		</div>
+		
 		{% if data.categories.length %}
-			<div class="col-sm-4 col-md-3">
+			<!-- <div class="col-sm-4 col-md-3">
 				<h2>Categories</h2>
 				<div class="list-group" style="margin-top: 70px;">
 					{% set class = ( "active" if not data.category else "" ) %}
@@ -118,8 +102,15 @@
 						<a href="/blog/{{ cat.key }}" class="{{ class }} list-group-item">{{ cat.name }}</a>
 					{% endfor %}
 				</div>
-			</div>
+			</div> -->
 		{% endif %}
+
 	</div>
+</div>
+<hr class="viela-Divider">
+<div class="viela-Donate">
+	<h3 class="viela-Heading viela-Heading--md">Novas histórias em breve</h3>
+	<p class="viela-Subtitle viela-Subtitle--sm">Ajude a criarmos novos caminhos</p>
+	<a href="#" class="viela-Button viela-Button--primary">Doar agora</a>
 </div>
 {% endblock %}
