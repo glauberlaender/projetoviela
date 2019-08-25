@@ -3,7 +3,7 @@
 {% block content %}
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12 col-md-12">
+			<div class="viela-Col-sm-12 viela-Col-md-12">
 				<article>
 					<p>
 						<a href="/blog/{{data.post.categories[0].key}}">&larr; {{data.post.categories[0].name}}s</a>
@@ -18,9 +18,9 @@
 								</div>
 							{% endif %}
 							<div class="row">
-								<div class="col-sm-12 col-md-offset-1 col-md-10 col-lg-10">
-									<h2 class="viela-tag viela-tag--highlight">{{data.post.categories[0].name}} - {{ data.post.hat }}</h2>
-									<h1>{{ data.post.title }}</h1>
+								<div class="viela-Col-sm-12 viela-Col-md-offset-1 viela-Col-md-10 viela-Col-lg-10">
+									<h2 class="viela-Tag viela-Tag--highlight">{{data.post.categories[0].name}} - {{ data.post.hat }}</h2>
+									<h1 class="viela-Heading viela-Heading--xxl">{{ data.post.title }}</h1>
 								</div>
 							</div>
 							{# <h5>Posted</h5>
@@ -36,7 +36,7 @@
 							{% endif %} #}
 						</header>
 						<div class="row post">
-							<div class="col-sm-12 col-md-offset-1 col-md-10 col-lg-10">
+							<div class="viela-Col-sm-12 viela-Col-md-offset-1 viela-Col-md-10 viela-Col-lg-10">
 								{{ data.post.content.full|safe }}
 							</div>
 						</div>
