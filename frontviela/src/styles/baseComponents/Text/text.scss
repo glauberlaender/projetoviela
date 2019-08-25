@@ -1,0 +1,65 @@
+ /**
+  * Default Text
+  */
+
+  @mixin defaultText {
+
+    font-family: $font-family-base;
+    font-weight: $font-weight-regular;
+    color: $color-neutral-darkest;
+
+}
+
+
+/**
+  * Body Text
+  */
+
+@mixin bodyText {
+
+    &--body {
+        font-size: $font-size-xxs;
+        line-height: $font-size-xxs + 8px;
+    }
+
+}
+
+
+/**
+  * Caption Text
+  */
+
+@mixin captionText {
+
+    &--caption {
+        font-size: $font-size-xxxs;
+        line-height: $font-size-xxxs + 8px;
+    }
+
+}
+
+/**
+  * Inverse
+  */
+
+  @mixin captionInverse {
+
+    &--inverse {
+        color: $color-neutral-lightest;
+    }
+
+}
+
+
+
+ /**
+  * Text helper class
+  */
+ .#{$namespace}-Text {
+    @include defaultText;
+    @include bodyText;
+    @include captionText;
+    @include captionInverse;
+
+ }
+

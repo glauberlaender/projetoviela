@@ -1,0 +1,11 @@
+.#{$namespace}-SectionContent { 
+  height: 960px;
+  width: 100%;
+
+  .#{$namespace}-Content { 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

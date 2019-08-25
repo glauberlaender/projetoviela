@@ -1,0 +1,36 @@
+
+@mixin defaultLink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    font-family: $font-family-base;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    
+}
+
+@mixin modifiersLink {
+    &--light {
+        color: $color-neutral-lightest;
+    }
+    &--dark {
+        color: $color-neutral-darkest;
+    }
+}
+
+.#{$namespace}-Link { 
+    
+    @include defaultLink;
+    @include modifiersLink;
+
+    a { 
+        color: inherit;
+        text-decoration: none;
+    }
+
+    img { 
+        margin-left: 20px;
+    }
+
+}

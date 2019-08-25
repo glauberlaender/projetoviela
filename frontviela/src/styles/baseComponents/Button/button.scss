@@ -1,0 +1,38 @@
+@mixin buttonDefault {
+  padding: 12px 60px;
+
+  font-family: $font-family-base;
+  font-weight: $font-weight-extra-bold;
+  font-size: $font-size-xs;
+  text-align: center;
+  text-decoration: none;
+
+  display: inline-flex;
+  
+  color: #FFFFFF;
+  
+  
+}
+
+@mixin buttonModifiers {
+    &--primary { 
+      background-color: $color-primary;
+    }
+
+    &--secondary { 
+      background-color: $color-secondary;
+    }
+
+    &:hover { 
+      opacity: .6;
+      transition: 200ms ease;
+      text-decoration: none;
+      color: #FFFFFF;
+    }
+} 
+
+
+.#{$namespace}-Button { 
+  @include buttonDefault;
+  @include buttonModifiers;
+}

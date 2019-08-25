@@ -1,0 +1,97 @@
+ /**
+  * Default Heading
+  */
+
+ @mixin titleDefault {
+     color:$color-neutral-darkest;
+     font-family: $font-family-base;
+     font-weight: 900;
+     line-height: normal;
+
+     &--xxl {
+
+         font-size: $font-size-xxl;
+         line-height: $font-size-xxl + 4px;
+
+         @media screen and (min-width: 991px ) {
+
+             font-size: $font-size-xxxl;
+             line-height: $font-size-xxxl + 4px;
+         }
+     }
+     
+     &--xl {
+
+         font-size: $font-size-xl;
+         line-height: $font-size-xl + 4px;
+
+         @media screen and (min-width: 991px ) {
+
+             font-size: $font-size-xxl;
+             line-height: $font-size-xxl + 4px;
+         }
+     }
+
+     &--lg {
+
+         font-size: $font-size-lg;
+         line-height: $font-size-lg + 4px;
+
+         @media screen and (min-width: 991px ) {
+             font-size: $font-size-xl;
+             line-height: $font-size-xl + 4px;
+         }
+
+     }
+
+     &--md {
+
+         font-size: $font-size-md;
+         line-height: $font-size-md + 4px;
+
+         @media screen and (min-width: 991px ) {
+             font-size: $font-size-lg;
+             line-height: $font-size-lg + 4px;
+
+         }
+     }
+
+    &--sm {
+
+        font-size: $font-size-sm;
+        line-height: $font-size-sm + 4px;
+
+        @media screen and (min-width: 991px ) {
+            font-size: $font-size-md;
+            line-height: $font-size-md + 4px;
+
+        }
+    }
+
+    &--xs {
+
+        font-size: $font-size-xs;
+        line-height: $font-size-xs + 4px;
+
+        @media screen and (min-width: 991px ) {
+            font-size: $font-size-sm;
+            line-height: $font-size-sm + 4px;
+
+        }
+    }
+
+    &--inverse {
+        color: $color-neutral-lightest;
+    }
+
+}
+
+
+
+ /**
+  * Heading helper class
+  */
+ .#{$namespace}-Heading {
+     @include titleDefault;
+ }
+

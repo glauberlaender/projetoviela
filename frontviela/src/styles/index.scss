@@ -1,0 +1,48 @@
+@import './reset';
+
+$namespace : viela;
+
+$font-size-xxxs: 12px;
+$font-size-xxs: 16px;
+$font-size-xs: 20px;
+$font-size-sm: 24px;
+$font-size-md: 28px;
+$font-size-lg: 32px;
+$font-size-xl: 36px;
+$font-size-xxl: 48px;
+$font-size-xxxl: 64px;
+
+$font-weight-extra-light : 200;
+$font-weight-light : 300;
+$font-weight-regular : 400;
+$font-weight-medium : 500;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-black: 900;
+
+$color-neutral-lightest : #fff;
+$color-neutral-darkest : #000;
+
+$color-primary : #EE283B;
+$color-secondary : #00AEEF;
+
+
+$font-family-base:  'Encode Sans Expanded';
+
+
+@import 'baseComponents/Text/heading',
+        'baseComponents/Text/text';
+
+@import 'baseComponents/Tag/hat';
+
+@import 'baseComponents/Link/link';
+
+@import 'baseComponents/Button/button';
+
+
+
+
+@import'components/content/content';
+
+
+@import'section/sectionContent';
