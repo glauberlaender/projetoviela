@@ -1,0 +1,56 @@
+/**
+ * Default Subtitle
+ */
+ @mixin subtitleDefault {
+
+  font-family: $font-family-base;
+  font-weight: $font-weight-medium;
+  color: $color-neutral-darkest;
+
+
+  &--md  {
+    font-size: $font-size-sm;
+    line-height: $font-size-sm + 8px;
+
+    @media screen and (min-width: map-get($grid-breakpoints, lg )) {
+      font-size: $font-size-md;
+      line-height: $font-size-md + 8px;
+
+    }
+
+   }
+
+
+
+   &--sm {
+     font-size: $font-size-xs;
+     line-height: $font-size-xs + 8px;
+
+     @media screen and (min-width: map-get($grid-breakpoints, lg )) {
+       font-size: $font-size-sm;
+       line-height: $font-size-sm + 8px;
+
+     }
+
+   }
+   
+   &--inverse {
+     color: $color-neutral-lightest;
+   }
+
+   &--inverseDarkest {
+     color: $color-neutral-darkest;
+   }
+
+}
+
+
+
+/**
+* Subtitle helper class
+*/
+.#{$namespace}-Subtitle {
+
+ @include subtitleDefault;
+
+}

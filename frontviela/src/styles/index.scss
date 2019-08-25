@@ -59,8 +59,9 @@ $font-family-base:  'Encode Sans Expanded';
 
 // Base Components
 @import "baseComponents/Grid/utils/variables";
-@import 'baseComponents/Text/heading',
-        'baseComponents/Text/text';
+@import 'baseComponents/Text/Heading',
+        'baseComponents/Text/Text',
+        'baseComponents/Text/Subtitle';
 
 @import 'baseComponents/Tag/hat';
 @import 'baseComponents/Link/link';
@@ -72,6 +73,7 @@ $font-family-base:  'Encode Sans Expanded';
 @import 'components/Content';
 @import 'components/Post';
 @import 'components/HeaderInternal';
+@import 'components/Donate';
 
 // Sections
 @import 'section/SectionContent';
