@@ -30,6 +30,9 @@ $color-secondary : #00AEEF;
 $font-family-base:  'Encode Sans Expanded';
 
 
+
+@import "baseComponents/Grid/utils/variables";
+
 @import 'baseComponents/Text/heading',
         'baseComponents/Text/text';
 
@@ -38,6 +41,9 @@ $font-family-base:  'Encode Sans Expanded';
 @import 'baseComponents/Link/link';
 
 @import 'baseComponents/Button/button';
+
+@import 'baseComponents/Grid/grid';
+
 
 
 
