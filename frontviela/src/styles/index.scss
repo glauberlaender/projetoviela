@@ -12,6 +12,33 @@ $font-size-xl: 36px;
 $font-size-xxl: 48px;
 $font-size-xxxl: 64px;
 
+$spacing-inline-xxxs: 4px;
+$spacing-inline-xxs: 8px;
+$spacing-inline-xs: 16px;
+$spacing-inline-sm: 24px;
+$spacing-inline-md: 32px;
+$spacing-inline-lg: 48px;
+$spacing-inline-xl: 64px;
+$spacing-inset-xxs: 4px;
+$spacing-inset-xs: 8px;
+$spacing-inset-sm: 16px;
+$spacing-inset-md: 24px;
+$spacing-inset-lg: 32px;
+$spacing-inset-xl: 48px;
+$spacing-squish-sm: 8px 16px;
+$spacing-squish-md: 16px 24px;
+$spacing-squish-lg: 16px 32px;
+$spacing-squish-xl: 32px 48px;
+$spacing-stack-xxxs: 4px;
+$spacing-stack-xxs: 8px;
+$spacing-stack-xs: 16px;
+$spacing-stack-sm: 24px;
+$spacing-stack-md: 32px;
+$spacing-stack-lg: 48px;
+$spacing-stack-xl: 64px;
+$spacing-stack-xxl: 96px;
+$spacing-stack-xxxl: 18px;
+
 $font-weight-extra-light : 200;
 $font-weight-light : 300;
 $font-weight-regular : 400;
@@ -30,25 +57,19 @@ $color-secondary : #00AEEF;
 $font-family-base:  'Encode Sans Expanded';
 
 
-
+// Base Components
 @import "baseComponents/Grid/utils/variables";
-
 @import 'baseComponents/Text/heading',
         'baseComponents/Text/text';
 
 @import 'baseComponents/Tag/hat';
-
 @import 'baseComponents/Link/link';
-
 @import 'baseComponents/Button/button';
-
 @import 'baseComponents/Grid/grid';
 
+// Components
+@import 'components/Content';
+@import 'components/Post';
 
-
-
-
-@import'components/content/content';
-
-
-@import'section/sectionContent';
+// Sections
+@import 'section/SectionContent';

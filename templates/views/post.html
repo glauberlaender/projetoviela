@@ -1,7 +1,7 @@
 {% extends "layouts/internal-page.html" %}
 
 {% block content %}
-	<article class="viela-Container">
+	<article class="viela-Container viela-Post">
 		<p>
 			<a href="/blog/{{data.post.categories[0].key}}">&larr; {{data.post.categories[0].name}}s</a>
 		</p>
@@ -10,22 +10,20 @@
 		{% else %}
 			<header>
 				{% if data.post.image.exists %}
-					<div class="viela-Row image-wrap">
+					<div class="viela-Row viela-Post-banner">
 						<img src="{{ data.post._.image.fit(1230,586) }}" class="viela-Col-sm-12">
 					</div>
 				{% endif %}
-				<div class="viela-Row">
-					<div class="viela-Col-sm-12 viela-Col-md-offset-1 viela-Col-md-10 viela-Col-lg-10">
-						<h2 class="viela-Tag viela-Tag--highlight">{{data.post.categories[0].name}} - {{ data.post.hat }}</h2>
-						<h1 class="viela-Heading viela-Heading--xxl">{{ data.post.title }}</h1>
-					</div>
+				<div class="viela-Content viela-Row">
+					<p class="viela-Tag viela-Tag--dark viela-Col-md-10 viela-Offset-md-1">{{data.post.categories[0].name}} - {{ data.post.hat }}</p>
+					<h2 class="viela-Heading viela-Heading--xl viela-Col-md-6 viela-Offset-md-1">{{ data.post.title }}</h2>
 				</div>
 			</header>
-			<div class="viela-Row post">
-				<div class="viela-Text viela-Text--body viela-Col-sm-6">
+			<div class="viela-Row">
+				<div class="viela-Text viela-Text--body viela-Col-md-5 viela-Offset-md-1">
 					{{ data.post.content.full|safe }}
 				</div>
-				<div class="viela-Text viela-Text--body viela-Col-sm-6">
+				<div class="viela-Text viela-Text--body viela-Col-md-5">
 					{{ data.post.content.full|safe }}
 				</div>
 			</div>
