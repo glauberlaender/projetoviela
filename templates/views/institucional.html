@@ -1,0 +1,52 @@
+{% extends "layouts/internal-page.html" %}
+
+{% block content %}
+	<article class="viela-Post">
+		{% if not data.post %}
+			<h2>Post inválido :/</h2>
+		{% else %}
+			<header>
+				{% if data.post.image.exists %}
+					<div class="viela-Row viela-Post-banner">
+						<img src="{{ data.post._.image.fit(1230,586) }}" class="viela-Col-sm-12">
+					</div>
+				{% endif %}
+				<div class="viela-Content viela-Row">
+					<p class="viela-Tag viela-Tag--dark viela-Col-md-10 viela-Offset-md-1">{{data.post.categories[0].name}} - {{ data.post.hat }}</p>
+					<h2 class="viela-Heading viela-Heading--xl viela-Col-md-6 viela-Offset-md-1">{{ data.post.title }}</h2>
+				</div>
+			</header>
+			<div class="viela-Row">
+				<div class="viela-Text viela-Text--body viela-Col-md-5 viela-Offset-md-1">
+					{{ data.post.content.full|safe }}
+				</div>
+				<div class="viela-Text viela-Text--body viela-Col-md-5">
+					{{ data.post.content.full|safe }}
+				</div>
+			</div>
+		{% endif %}
+	</article>
+  <hr class="viela-Divider">
+    <br>
+    <br>
+    <br>
+      ESTATISTICAS AQUI
+    <br>
+    <br>
+    <br>
+  <hr class="viela-Divider">
+    <br>
+    <br>
+    <br>
+      O TIME QUE O VIELA FAZ AQUI
+    <br>
+    <br>
+    <br>
+  <hr class="viela-Divider">
+
+	<div class="viela-Donate">
+    <h3 class="viela-Heading viela-Heading--md">Novas histórias em breve</h3>
+    <p class="viela-Subtitle viela-Subtitle--sm">Ajude a criarmos novos caminhos</p>
+    <a href="#" class="viela-Button viela-Button--primary">Doar agora</a>
+  </div>
+{% endblock %}
