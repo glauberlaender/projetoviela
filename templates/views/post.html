@@ -1,48 +1,34 @@
 {% extends "layouts/internal-page.html" %}
 
 {% block content %}
-	<div class="container">
-		<div class="row">
-			<div class="viela-Col-sm-12 viela-Col-md-12">
-				<article>
-					<p>
-						<a href="/blog/{{data.post.categories[0].key}}">&larr; {{data.post.categories[0].name}}s</a>
-					</p>
-					{% if not data.post %}
-						<h2>Post inválido :/</h2>
-					{% else %}
-						<header>
-							{% if data.post.image.exists %}
-								<div class="image-wrap">
-									<img src="{{ data.post._.image.fit(1230,586) }}" class="img-responsive">
-								</div>
-							{% endif %}
-							<div class="row">
-								<div class="viela-Col-sm-12 viela-Col-md-offset-1 viela-Col-md-10 viela-Col-lg-10">
-									<h2 class="viela-Tag viela-Tag--highlight">{{data.post.categories[0].name}} - {{ data.post.hat }}</h2>
-									<h1 class="viela-Col-md-6 viela-Heading viela-Heading--xxl">{{ data.post.title }}</h1>
-								</div>
-							</div>
-							{# <h5>Posted</h5>
-							{% if data.post.publishedDate %}
-								on {{ data.post._.publishedDate.format("MMMM Do, YYYY") }}
-							{% endif %}
-							{% if data.post.categories and data.post.categories.length %}
-								in
-								{% for cat in data.post.categories %}<a href="/blog/{{ cat.key }}">{{ cat.name }}</a>{% if loop.index < data.post.categories.length %}, {% endif %}{% endfor %}
-											{% endif %}
-							{% if data.post.author %}
-								by {{ data.post.author.name.first }}
-							{% endif %} #}
-						</header>
-						<div class="row post">
-							<div class="viela-Col-sm-12 viela-Col-md-offset-1 viela-Col-md-10 viela-Col-lg-10">
-								{{ data.post.content.full|safe }}
-							</div>
-						</div>
-					{% endif %}
-				</article>
+	<article class="viela-Container">
+		<p>
+			<a href="/blog/{{data.post.categories[0].key}}">&larr; {{data.post.categories[0].name}}s</a>
+		</p>
+		{% if not data.post %}
+			<h2>Post inválido :/</h2>
+		{% else %}
+			<header>
+				{% if data.post.image.exists %}
+					<div class="viela-Row image-wrap">
+						<img src="{{ data.post._.image.fit(1230,586) }}" class="viela-Col-sm-12">
+					</div>
+				{% endif %}
+				<div class="viela-Row">
+					<div class="viela-Col-sm-12 viela-Col-md-offset-1 viela-Col-md-10 viela-Col-lg-10">
+						<h2 class="viela-Tag viela-Tag--highlight">{{data.post.categories[0].name}} - {{ data.post.hat }}</h2>
+						<h1 class="viela-Heading viela-Heading--xxl">{{ data.post.title }}</h1>
+					</div>
+				</div>
+			</header>
+			<div class="viela-Row post">
+				<div class="viela-Text viela-Text--body viela-Col-sm-6">
+					{{ data.post.content.full|safe }}
+				</div>
+				<div class="viela-Text viela-Text--body viela-Col-sm-6">
+					{{ data.post.content.full|safe }}
+				</div>
 			</div>
-		</div>
-	</div>
+		{% endif %}
+	</article>
 {% endblock %}
