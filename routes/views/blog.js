@@ -65,8 +65,12 @@ exports = module.exports = function (req, res) {
 				state: 'published',
 			},
 		})
+			// .find().where("category", "institucional")
 			.sort('-publishedDate')
 			.populate('author categories');
+
+		// q.where('categories').not(['institucional'])
+		console.log(9999999, locals.data)
 
 		if (locals.data.category) {
 			q.where('categories').in([locals.data.category]);

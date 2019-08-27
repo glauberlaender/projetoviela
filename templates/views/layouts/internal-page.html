@@ -32,14 +32,20 @@
 		{# Add any other template-specific HEAD tags by extending the head block #}
 		{% block head %}{% endblock %}
 	</head>
-	<body class="viela-Container">
+	<body>
 
 		{# HEADER #}
-		<header class="viela-HeaderInternal viela-row">
+		<header class="viela-HeaderInternal viela-Container">
 			{% if data.post.categories[0].key %}
-				<a href="/blog/{{data.post.categories[0].key}}" class="viela-Heading viela-Heading--md viela-HeaderInternal-link">
-					&larr; {{data.post.categories[0].name}}
-				</a>
+				{% if data.post.categories[0].key === 'institucional' %}
+					<a href="/" class="viela-Heading viela-Heading--md viela-HeaderInternal-link">
+						&larr; Início
+					</a>
+				{% else %}
+					<a href="/blog/{{data.post.categories[0].key}}" class="viela-Heading viela-Heading--md viela-HeaderInternal-link">
+						&larr; {{data.post.categories[0].name}}
+					</a>
+				{% endif %}
 			{% else %}
 				<a href="/" class="viela-Heading viela-Heading--md viela-HeaderInternal-link">
 					&larr; Início
@@ -49,7 +55,7 @@
 		</header>
 
 		{# BODY #}
-		<div id="body">
+		<div id="body" class="viela-Container">
 			{# NOTE:
 			   There is no .container wrapping class around body blocks to allow more flexibility in design.
 			   Remember to include it in your templates when you override the intro and content blocks! #}
@@ -67,20 +73,23 @@
 
 
 		{# FOOTER #}
-		<div id="footer" class="viela-container">
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			FOOTER AQUI
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-		</div>
+		<footer class="viela-Footer">
+			<div class="viela-Container">
+				<div class="viela-Footer-content">
+					<div class="viela-Footer-logo">
+						<img src="/images/logo-white.svg" alt="Logo Viela">
+					</div>
+					<div class="viela-Footer-description">
+						<h1 class="viela-Heading viela-Heading--inverse">
+							Rua Macedônio Fernandes - Jardim São Luiz | São Paulo - SP
+						</h1>
+						<a href="mailto:projeto.viela@gmail.com" class="viela-Text viela-Text--inverse viela-Text--caption viela-Footer-emailLink">  
+							projeto.viela@gmail.com
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
 
 
 		{# JAVASCRIPT #}
@@ -99,6 +108,34 @@
 		{% if user and user.canAccessKeystone %}
 			<script src="/keystone/js/content/editor.js"></script>
 		{% endif %}
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+		<script>
+			var mySwiper = new Swiper('.swiper-container', {
+				speed: 400,
+				spaceBetween: 100,
+				slidesPerView: 4,
+				spaceBetween: 5,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				breakpoints: {
+					1024: {
+						slidesPerView: 4,
+						spaceBetween: 40,
+					},
+					768: {
+						slidesPerView: 3,
+						spaceBetween: 30,
+					},
+					640: {
+						slidesPerView: 1,
+						spaceBetween: 20,
+					}
+				}
+			});
+		</script>
 
 		{# Add scripts that are globally required by your site here. #}
 
