@@ -1,0 +1,13 @@
+.#{$namespace}-Swiper { 
+  &-navigation { 
+    display: flex;
+    position: relative;
+    margin-top: 55px;
+
+    &-item { 
+      position: relative;
+      margin-right: 40px;
+      background: none !important;
+    }
+  }
+}

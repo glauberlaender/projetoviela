@@ -1,0 +1,40 @@
+@mixin statisticsDefault {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin statisticsTitle {
+  &-title { 
+    font-size: 72px;
+  }
+}
+
+@mixin statisticsDescription {
+  &-description { 
+    font-size: 32px;
+
+    span { 
+      font-weight: 900;
+    }
+  }
+}
+
+@mixin statisticsInline {
+  &--inline { 
+    flex-direction: row;
+    align-items: flex-end;
+
+    .#{$namespace}-Statistics-description { 
+      position: relative;
+      top: -15px;
+    }
+  }
+}
+
+
+.#{$namespace}-Statistics { 
+  @include statisticsDefault;
+  @include statisticsTitle;
+  @include statisticsDescription;
+  @include statisticsInline;
+}
