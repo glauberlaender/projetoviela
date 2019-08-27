@@ -69,15 +69,15 @@ exports = module.exports = function (req, res) {
 			.sort('-publishedDate')
 			.populate('author categories');
 
-		// q.where('categories').not(['institucional'])
-		console.log(9999999, locals.data)
-
 		if (locals.data.category) {
 			q.where('categories').in([locals.data.category]);
 		}
 
 		q.exec(function (err, results) {
-			locals.data.posts = results;
+			locals.data.posts = results
+			results.results = results.results.filter(function(thePost){
+				return thePost.categories[0].key !== 'institucional'
+			});
 			next(err);
 		});
 	});

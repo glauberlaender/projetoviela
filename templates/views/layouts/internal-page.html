@@ -11,7 +11,7 @@
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
 		{# Customise the stylesheet for your site by editing /public/styles/site.sass #}
-		<!-- <link href="/styles/site.css" rel="stylesheet"> -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
 		<link rel="stylesheet" href="/viela/bundle.css">
 
 		{# This file provides the default styling for the KeystoneJS Content Editor #}
@@ -42,8 +42,8 @@
 						&larr; Início
 					</a>
 				{% else %}
-					<a href="/blog/{{data.post.categories[0].key}}" class="viela-Heading viela-Heading--md viela-HeaderInternal-link">
-						&larr; {{data.post.categories[0].name}}
+					<a href="/blog" class="viela-Heading viela-Heading--md viela-HeaderInternal-link">
+						&larr; Blog
 					</a>
 				{% endif %}
 			{% else %}
@@ -113,9 +113,9 @@
 		<script>
 			var mySwiper = new Swiper('.swiper-container', {
 				speed: 400,
-				spaceBetween: 100,
 				slidesPerView: 4,
-				spaceBetween: 5,
+				spaceBetween: 16,
+				loop: true,
 				navigation: {
 					nextEl: '.swiper-button-next',
 					prevEl: '.swiper-button-prev',
@@ -123,15 +123,15 @@
 				breakpoints: {
 					1024: {
 						slidesPerView: 4,
-						spaceBetween: 40,
+						spaceBetween: 16,
 					},
 					768: {
 						slidesPerView: 3,
-						spaceBetween: 30,
+						spaceBetween: 16,
 					},
 					640: {
 						slidesPerView: 1,
-						spaceBetween: 20,
+						spaceBetween: 16,
 					}
 				}
 			});

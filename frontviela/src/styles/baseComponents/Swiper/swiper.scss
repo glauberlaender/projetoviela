@@ -10,4 +10,13 @@
       background: none !important;
     }
   }
+  .#{$namespace}-ImageContent {
+    .#{$namespace}-Heading {
+      margin-top: $spacing-stack-sm;
+      margin-bottom: $spacing-stack-xs;
+    }
+    img {
+      width: 100%;
+    }
+  }
 }
