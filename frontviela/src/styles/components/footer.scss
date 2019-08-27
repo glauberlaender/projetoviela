@@ -1,0 +1,50 @@
+@mixin  footerDefault {
+  width: 100%;
+  height: auto;
+  padding: 25px 0;
+  background-color: $color-secondary;
+}
+
+@mixin  footerContent {
+  &-content { 
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+
+    @media only screen and (min-width: 768px) { 
+      flex-direction: row;
+    }
+  }
+}
+
+@mixin footerLogo {
+  &-logo { 
+    margin-bottom: $spacing-stack-sm;
+    
+    @media only screen and (min-width: 768px) { 
+      margin-bottom: 0;
+
+      padding-right: 40px;
+      border-right: 3px solid $color-neutral-lightest;
+    }
+  }
+}
+
+@mixin footerDescription {
+  &-description { 
+    text-align: center;
+
+    @media only screen and (min-width: 768px) { 
+      padding-left: 40px;
+      text-align: left;
+    }
+  }
+}
+
+.#{$namespace}-Footer { 
+  @include footerDefault;
+  @include footerContent;
+  @include footerLogo;
+  @include footerDescription;
+}
