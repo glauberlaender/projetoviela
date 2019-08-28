@@ -1,34 +1,378 @@
 {% extends "layouts/default.html" %}
 
 {% block content %}
-	<div class="container">
-		<div class="jumbotron">
-			<img src="/images/logo.svg" width="160">
-			<h1>Welcome</h1>
-			<p>This is your new <a href="http://keystonejs.com" target="_blank">KeystoneJS</a> website.</p>
-			<p>
-				It includes the latest versions of
-				<a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>
-				and <a href="http://www.jquery.com/" target="_blank">jQuery</a>.
-			</p>
-			<p>Visit the <a href="http://keystonejs.com/guide" target="_blank">Getting Started</a> guide to learn how to customise it.</p>
-			<hr>
+<div class="container">
+	<div class="jumbotron">
+		<div class="viela-Container">
+			<section class="viela-sectionHero" style="background-image: url(/images/hero.png)">
+				<div class="viela-Offset-md-2">
+					<img src="/images/logo-viela.svg" alt="Logo Viela">
+				</div>
+			</section>
+			<div class="viela-Donate-inline">
+				<div class="viela-Donate-list hide-mobile">
+						<div class="viela-Donate-list-item">
+							<p class="viela-Heading viela-Heading--md">
+								10
+							</p>
+							<p class="viela-Text viela-Text--caption">
+								ATIVIDADES
+							</p>
+						</div>
+						<div class="viela-Donate-list-item">
+								<p class="viela-Heading viela-Heading--md">
+									20
+								</p>
+								<p class="viela-Text viela-Text--caption">
+									PROFISSIONAIS
+								</p>
+							</div>
+							<div class="viela-Donate-list-item">
+									<p class="viela-Heading viela-Heading--md">
+										374
+									</p>
+									<p class="viela-Text viela-Text--caption">
+										CRIANÇAS
+									</p>
+								</div>
+				</div>
+				<div class="viela-Donate-list">
+						<div class="viela-Donate-list-item is-collumn">
+							<p class="viela-Heading">
+									Seja um amigo do Projeto Viela.
+							</p>
+							<p class="viela-Text viela-Text--caption">
+									E ajude a criarmos mais caminhos.
+							</p>
+						</div>
+				</div>
+				<div class="viela-Donate-list">
+						<div class="viela-Donate-list-item is-collumn">
+								<a class="viela-Button viela-Button--secondary" href="#">
+										Doar agora
+								</a>
+						</div>
+				</div>
+			</div>
+		</div>
+		<section class="viela-sectionContent" style="background: #542E91">
+			<div class="viela-Container">
+				<div class="viela-Row">
+					
+						<div class="viela-Offset-lg-6 viela-Col-lg-4">
+							<div class="viela-Content">
+								<p class="viela-Tag viela-Tag--light">
+									Seja um amigo
+								</p>
+								<h2 class="viela-Heading viela-Heading--inverse viela-Heading--xl">
+										Ajude a<br>criar mais<br>caminhos
+								</h2>
+								<p class="viela-Text viela-Text--inverse viela-Text--body" >  
+										Amigos nos ajudam a crescer, dão suporte nos momentos difíceis e celebram nossas vitórias. Torne-se amigo do Viela e ofereça às crianças do Jd Ibirapuera a chance de trilhar os caminhos para uma vida melhor ;)
+								</p>
+								<a class="viela-Button viela-Button--primary" href="#">
+										Doar agora
+								</a>
+							</div>
+						</div>
+					
+				</div>
+			</div>
+		</section>
+		<div class="viela-Container">
+			<section class="viela-sectionContent">
+				<div class="viela-Container">
+					<div class="viela-Row">
+						<div class="viela-Offset-lg-1 viela-Col-lg-6">
+							<div class="viela-Content">
+								<p class="viela-Tag viela-Tag--dark">
+									Novidades 
+								</p>
+								<h2 class="viela-Heading viela-Heading--xl">
+									Nossa festa<br>de 10 anos
+								</h2>
+								<p class="viela-Text viela-Text--body" >  
+									Estamos comemorando 10 anos de existência, ou melhor, de resistência. Uma história de transformação, iniciada pelo Buiu e refletida nas crianças da Viela, e que merece ser celebrada por toda a comunidade.
+								</p>
+								<div class="viela-Link">
+									<a class="viela-Link--dark" href="#">
+										Veja outras novidades
+									</a>
+									<img src="/images/arrow-right.svg" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<section class="viela-sectionCaminhos" style="background-color: #00AEEF;">
+			<div class="viela-Container">
+				<div class="viela-Content">
+					<p class="viela-Tag viela-Tag--light">
+						Atividades
+					</p>
+					<div class="viela-Row">
+						<h2 class="viela-Heading viela-Heading--inverse viela-Heading--xl viela-Col-md-6">
+							Nossos caminhos
+						</h2>
+					</div>
+				</div>
+				<div class="viela-Swiper viela-Container-fluid">
+					<!-- Slider main container -->
+					<div class="swiper-container">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+							<!-- Slides -->
+							<div class="swiper-slide">
+								<div class="viela-ImageContent">
+									<img src="/images/thiago.jpg" alt="">
+									<h3 class="viela-Heading viela-Heading--inverse viela-Heading--md">
+										Futebol
+									</h3>
+									<p class="viela-Text viela-Text-body viela-Text--inverse">
+										Aulas e treinos de futsal para diferentes idades. Mas a bola só vai rolar depois que todos fizerem a leitura do dia.
+									</p>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="viela-ImageContent">
+									<img src="/images/thiago.jpg" alt="">
+									<h3 class="viela-Heading viela-Heading--inverse viela-Heading--md">
+										Jiu-jitsu
+									</h3>
+									<p class="viela-Text viela-Text-body viela-Text--inverse">
+										Meninos e meninas precisam de técnica, dedicação e disciplina nas aulas super disputadas dos professores Danilo e Juliana.
+									</p>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="viela-ImageContent">
+									<img src="/images/thiago.jpg" alt="">
+									<h3 class="viela-Heading viela-Heading--inverse viela-Heading--md">
+										Inglês
+									</h3>
+									<p class="viela-Text viela-Text-body viela-Text--inverse">
+										Uma oportunidade para aprender o idioma que pode abrir as portas do universo digital, dos games e do turismo.
+									</p>
+								</div>
+								
+							</div>
+							<div class="swiper-slide">
+								<div class="viela-ImageContent">
+									<img src="/images/thiago.jpg" alt="">
+									<h3 class="viela-Heading viela-Heading--inverse viela-Heading--md">
+										Música
+									</h3>
+									<p class="viela-Text viela-Text-body viela-Text--inverse">
+										Renato Paz leva aulas de violão e construção musical para as crianças que podem desenvolver uma nova forma de expressão através da arte.
+									</p>
+								</div>
+								
+							</div>
+						</div>
+						
+						<div class="viela-Swiper-navigation">
+							<!-- If we need navigation buttons -->
+							<div class="viela-Swiper-navigation-item swiper-button-prev viela-Tag--light">
+								<img class="viela-Tag--light" src="/images/arrow-left.svg" alt="">
+							</div>
+							<div class="viela-Swiper-navigation-item swiper-button-next viela-Tag--light">
+								<img src="/images/arrow-right.svg" alt="">
+							</div>
+						</div>
+						
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<div class="viela-Container">
+			<section class="viela-sectionContent">
+				<div class="viela-Container">
+					<div class="viela-Row">
+						<div class="viela-Offset-lg-1 viela-Col-lg-6">
+							<div class="viela-Content">
+								<p class="viela-Tag viela-Tag--dark">
+									Histórias
+								</p>
+								<h2 class="viela-Heading viela-Heading--xl">
+									Muito prazer,<br> eu sou a Yasmin
+								</h2>
+								<p class="viela-Text viela-Text--body" >  
+									Eu participo do Projeto Viela desde 2009. Organizei o Cine Viela, ajudei o Futebol e Leitura, fiz aulas de inglês e recentemente me apaixonei pelas aulas de gastronomia. Sonho com o dia em que poderei dar aula de culinária para as crianças da comunidade.
+								</p>
+								<div class="viela-Link">
+									<a class="viela-Link--dark" href="#">Conheça outras histórias</a>
+									<img src="/images/arrow-right.svg" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="viela-sectionContent" style="background: #FFCF01 ">
+				<div class="viela-Container">
+					<div class="viela-Row">
+						
+							<div class="viela-Offset-lg-6 viela-Col-lg-4">
+								<div class="viela-Content">
+									<p class="viela-Tag viela-Tag--dark">
+										INSTITUCIONAL
+									</p>
+									<h2 class="viela-Heading viela-Heading--xl">
+										O que somos e fazemos
+									</h2>
+									<p class="viela-Text viela-Text--body" >  
+										Nós do Projeto Viela temos um único objetivo: oferecer caminhos alternativos para a formação de jovens e crianças através do aprendizado, da cultura e do esporte.
+									</p>
+									<div class="viela-Link">
+										<a class="viela-Link--dark" href="#">Saiba mais</a>
+										<img src="/images/arrow-right.svg" alt="">
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+			</section>
+			<section class="viela-sectionProfile" style="background: #FFCF01 ">
+				<div class="viela-Offset-md-1">
+					<div class="viela-Profile">
+						<div class="viela-Profile-content">
+							<div class="viela-Profile-picture">
+								<img src="/images/buiu.png" alt="">
+							</div>
+							<div class="viela-Profile-description">
+								<h3 class="viela-Heading viela-Heading--xs">
+									Anderson Buiú
+								</h3>
+								<p class="viela-Text viela-Text--body" >  
+									Conheça a história do fundador da <br> grande inspiração da criançada.
+								</p>
+								<div class="viela-Link">
+									<a class="viela-Link--dark" href="#">
+										Saiba mais	
+									</a>
+									<img src="/images/arrow-right.svg" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>			
+		</div>
+		<section class="viela-sectionInstagram">
+			<div class="viela-Container">
+				<div class="viela-Content">
+					<p class="viela-Tag viela-Tag--dark">
+						Contato
+					</p>
+					<div class="viela-Row">
+						<h2 class="viela-Heading viela-Heading--xl viela-Col-md-6">
+							Instagram
+						</h2>
+					</div>
+				</div>
+				<div class="viela-Swiper viela-Container-fluid">
+					<!-- Slider main container -->
+					<div class="swiper-container">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+							<!-- Slides -->
+							<div class="swiper-slide">
+								<div class="viela-ImageContent">
+									<img src="/images/thiago.jpg" alt="">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="viela-ImageContent">
+									<img src="/images/thiago.jpg" alt="">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="viela-ImageContent">
+									<img src="/images/thiago.jpg" alt="">
+								</div>
+								
+							</div>
+							<div class="swiper-slide">
+								<div class="viela-ImageContent">
+									<img src="/images/thiago.jpg" alt="">
+								</div>
+								
+							</div>
+						</div>
+						
+						<div class="viela-Swiper-navigation">
+							<!-- If we need navigation buttons -->
+							<div class="viela-Swiper-navigation-item swiper-button-prev">
+								<img src="/images/arrow-left.svg" alt="">
+							</div>
+							<div class="viela-Swiper-navigation-item swiper-button-next">
+								<img src="/images/arrow-right.svg" alt="">
+							</div>
+						</div>
+						
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="viela-sectionPartners">
+			<div class="viela-Container">
+				<div class="viela-Partners">
+					<div class="viela-Partners-content">
+						<div class="viela-Partners-item">
+							<img src="/images/partner-01.svg" alt="">
+						</div>
+						<div class="viela-Partners-item">
+							<img src="/images/partner-02.svg" alt="">
+						</div>
+						<div class="viela-Partners-item">
+							<img src="/images/partner-03.svg" alt="">
+						</div>
+						<div class="viela-Partners-item">
+							<img src="/images/partner-04.svg" alt="">
+						</div>
+					</div>
+					
+					<div class="viela-Partners-content">
+						<div class="viela-Partners-item">
+							<img src="/images/partner-05.svg" alt="">
+						</div>
+						<div class="viela-Partners-item">
+							<img src="/images/partner-06.svg" alt="">
+						</div>
+						<div class="viela-Partners-item">
+							<img src="/images/partner-07.svg" alt="">
+						</div>
+						<div class="viela-Partners-item">
+							<img src="/images/partner-08.svg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- <hr>
 			{% if user and user.canAccessKeystone %}
-				<p>
-					<a href="/keystone" class="btn btn-lg btn-primary">Open the Admin UI</a>
-				</p>
-			{% else %}
-				<p>We have created a default Admin user for you with the email <strong>admin@meiuca.design</strong> and the password <strong>12345678</strong>.</p>
-				<p>
-					<a href="/keystone/signin" style="margin-right: 10px" class="btn btn-lg btn-primary">Sign in</a>
-					to use the Admin UI.
-				</p>
-			{% endif %}
-			<hr>
 			<p>
+				<a href="/keystone" class="btn btn-lg btn-primary">Open the Admin UI</a>
+			</p>
+			{% else %}
+			<p>We have created a default Admin user for you with the email <strong>admin@meiuca.design</strong> and the password <strong>12345678</strong>.</p>
+			<p>
+				<a href="/keystone/signin" style="margin-right: 10px" class="btn btn-lg btn-primary">Sign in</a>
+				to use the Admin UI.
+			</p>
+			{% endif %}
+			<hr> -->
+			<!-- <p>
 				Remember to <a href="https://github.com/keystonejs/keystone" target="_blank">Star KeystoneJS on GitHub</a> and
 				<a href="https://twitter.com/keystonejs" target="_blank">follow @keystonejs</a> on twitter for updates.
-			</p>
+			</p> -->
 		</div>
 	</div>
-{% endblock %}
+	{% endblock %}
+	
