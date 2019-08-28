@@ -76,7 +76,7 @@ exports = module.exports = function (req, res) {
 		q.exec(function (err, results) {
 			locals.data.posts = results
 			results.results = results.results.filter(function(thePost){
-				return thePost.categories[0].key !== 'institucional'
+				return thePost.categories.key !== 'institucional'
 			});
 			next(err);
 		});
