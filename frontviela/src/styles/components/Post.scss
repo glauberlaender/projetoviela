@@ -2,7 +2,12 @@
   &-banner {
     margin-bottom: $spacing-stack-xl;
   }
-  .viela-Link--readMore {
+  .#{$namespace}-Link--readMore {
     margin-top: $spacing-stack-md;
+  }
+  &-richText {
+    column-count: 2;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
   }
 }
