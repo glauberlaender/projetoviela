@@ -11,8 +11,11 @@
     }
   }
   .#{$namespace}-ImageContent {
-    .#{$namespace}-Heading {
+    .#{$namespace}-Heading--sm {
       margin-top: $spacing-stack-sm;
+      margin-bottom: $spacing-stack-xxxs;
+    }
+    .#{$namespace}-Heading--xxs {
       margin-bottom: $spacing-stack-xs;
     }
     img {
