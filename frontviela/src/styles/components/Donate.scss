@@ -4,4 +4,40 @@
   .#{$namespace}-Button {
     margin-top: $spacing-stack-sm;
   }
+
+  &-inline { 
+    padding: 35px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media only screen and (min-width: 768px) { 
+      flex-direction: row;
+    }
+  }
+
+  &-list { 
+    display: flex;
+
+    &:first-child { 
+      border-right: 3px solid;
+      padding-right: 10px;
+    }
+    &-item {
+      margin-right: 15px;
+      display: flex;
+      align-items: center;
+      p { 
+        &:first-child { 
+          margin-right: 10px;
+        }
+      }
+
+      &.is-collumn { 
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+      }
+    }
+  }
 }

@@ -58,6 +58,16 @@ $color-secondary : #00AEEF;
 $font-family-base:  'Encode Sans Expanded';
 
 
+
+.hide-mobile { 
+
+  @media only screen and (max-width: 992px) { 
+    display: none !important;
+  }
+
+}
+
+
 // Base Components
 @import "baseComponents/Grid/utils/variables";
 @import 'baseComponents/Text/Heading',
@@ -70,6 +80,8 @@ $font-family-base:  'Encode Sans Expanded';
 @import 'baseComponents/Grid/grid';
 @import 'baseComponents/Divider';
 @import 'baseComponents/Swiper/swiper';
+@import 'baseComponents/Partners/partners';
+@import 'baseComponents/Profile/profile';
 
 // Components
 @import 'components/Content';
@@ -80,4 +92,8 @@ $font-family-base:  'Encode Sans Expanded';
 @import 'components/Statistics';
 
 // Sections
-@import 'section/SectionContent';
+@import 'section/sectionContent';
+@import 'section/sectionProfile';
+@import 'section/sectionInstagram';
+@import 'section/sectionCaminhos';
+@import 'section/sectionHero';
