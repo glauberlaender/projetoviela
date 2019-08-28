@@ -36,8 +36,8 @@
 
 		{# HEADER #}
 		<header class="viela-HeaderInternal viela-Container">
-			{% if data.post.categories[0].key %}
-				{% if data.post.categories[0].key === 'institucional' %}
+			{% if data.post.categories.key %}
+				{% if data.post.categories.key === 'institucional' %}
 					<a href="/" class="viela-Heading viela-Heading--md viela-HeaderInternal-link">
 						&larr; Início
 					</a>
