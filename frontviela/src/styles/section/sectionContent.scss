@@ -43,6 +43,16 @@
     }
   }
 
+  &--whatdo { 
+    @media only screen and (min-width:1200px) { 
+      padding-bottom: 20%;
+    }
+
+    @media only screen and (min-width:1750px) { 
+      padding-bottom: 30%;
+    }
+  }
+
   &--image { 
     height: auto;
     padding: 0 !important;
@@ -114,6 +124,7 @@
       }
       @media only screen and (min-width:768px) {
         width: 50%;
+        max-width: 960px;
       }
       img { 
         width: 100%;
