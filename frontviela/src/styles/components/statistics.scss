@@ -1,17 +1,38 @@
 @mixin statisticsDefault {
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
+  @media only screen and (min-width: 768px) { 
+    margin-bottom: 0;
+  }
 }
 
 @mixin statisticsTitle {
   &-title { 
-    font-size: 72px;
+    font-size: 55px;
+    
+    @media only screen and (min-width: 768px) { 
+      font-size: 32px;
+    }
+    @media only screen and (min-width: 1200px) { 
+      font-size: 72px;
+
+    }
   }
 }
 
 @mixin statisticsDescription {
   &-description { 
-    font-size: 32px;
+    font-size: 24px;
+    
+    @media only screen and (min-width: 768px) { 
+      font-size: 18px;
+    }
+    
+    @media only screen and (min-width: 1200px) { 
+      font-size: 32px;
+    }
+
 
     span { 
       font-weight: 900;
@@ -37,4 +58,7 @@
   @include statisticsTitle;
   @include statisticsDescription;
   @include statisticsInline;
+
+  
+
 }

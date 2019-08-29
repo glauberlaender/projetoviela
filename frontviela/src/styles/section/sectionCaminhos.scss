@@ -1,6 +1,22 @@
 .#{$namespace}-sectionCaminhos { 
   height: auto;
   width: 100%;
-  padding: 80px 0;
+  padding: 110px 0;
+  background-color: $color-secondary;
+  position: relative;
 
+}
+
+.box-red {
+display: none;
+  @media only screen and (min-width: 1200px) { 
+    display: block;
+    position: absolute;
+    top: -60px;
+    width: 490px;
+    height: 120px;
+    background: $color-primary;
+    right: 0;
+
+  }
 }

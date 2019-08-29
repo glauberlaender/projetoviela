@@ -1,0 +1,17 @@
+.#{$namespace}-Pattern { 
+  display: none;
+  @media only screen and (min-width: 768px) { 
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%; 
+    img { 
+      width: 100%;
+    }
+  }
+
+  @media only screen and (min-width: 991px) { 
+    width:  auto; 
+  }
+}

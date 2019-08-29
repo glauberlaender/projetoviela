@@ -1,7 +1,7 @@
 .#{$namespace}-sectionHero { 
   height: 350px;
   width: 100%;
-  // background-image: url('../images/hero.png');
+  margin-top: 60px;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -10,8 +10,8 @@
   align-items: center;
 
 
-  @media only screen and ( min-width: 576px) { 
-    height: 775px;
+  @media only screen and ( min-width: 768px) { 
+    height: 100vh;
     justify-content: flex-start;
   }
 

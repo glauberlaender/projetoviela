@@ -1,4 +1,6 @@
 .#{$namespace}-Content { 
+  position: relative;
+  z-index: 2;
   .#{$namespace}-Tag { 
     margin-bottom: 15px;
   }

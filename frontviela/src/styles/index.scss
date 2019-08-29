@@ -61,12 +61,26 @@ $font-family-base:  'Encode Sans Expanded';
 
 .hide-mobile { 
 
-  @media only screen and (max-width: 992px) { 
+  @media only screen and (max-width: 991px) { 
     display: none !important;
   }
 
 }
 
+.hide-desk { 
+
+  @media only screen and (min-width: 992px) { 
+    display: none !important;
+  }
+
+}
+
+
+.#{$namespace}-Flex-column-sm-reverse { 
+  @media only screen and (max-width: 992px) { 
+    flex-direction: column-reverse;
+  } 
+}
 
 // Base Components
 @import "baseComponents/Grid/utils/variables";
@@ -80,8 +94,10 @@ $font-family-base:  'Encode Sans Expanded';
 @import 'baseComponents/Grid/grid';
 @import 'baseComponents/Divider';
 @import 'baseComponents/Swiper/swiper';
+@import 'baseComponents/Pattern/pattern';
 @import 'baseComponents/Partners/partners';
 @import 'baseComponents/Profile/profile';
+@import 'baseComponents/ImageContent/imageContent';
 
 // Components
 @import 'components/Content';
