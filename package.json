@@ -7,7 +7,7 @@
     "lodash": "^4.13.1",
     "consolidate": "0.14.5",
     "nunjucks": "3.0.0", 
-    "node-sass": "4.5.0",
+    "node-sass": "4.13.1",
     "node-sass-middleware": "0.11.0", 
     "dotenv": "4.0.0", 
     "keystone-email": "1.0.5", 
